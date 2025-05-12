@@ -1,17 +1,20 @@
 # Ignore everything
-*
+models/
+models/**
 
-# But don't ignore Git itself
-!.gitignore
+alignment-handbook/
+alignment-handbook/**
 
-# Keep these folders
-!assess/
-!configs/
-!create_dataset_GSM8k/
-!create_dataset_MATH/
+dpo/logs/**
+dpo/wandb/**
+dpo/dataset/**
+dpo/data/**
 
-!assess/**
-!configs/**
-!create_dataset_GSM8k/**
-!create_dataset_MATH/**
-!start_vllm.sh
+lightning-dpo/phi-3-mini/**
+lightning-dpo/local_datasets/**
+
+sft/data/**
+sft/dataset/**
+sft/logs/**
+sft/model_cache/**
+sft/wandb/**

@@ -1,0 +1,43 @@
+# Model arguments
+model_name_or_path: microsoft/Phi-3-mini-4k-instruct
+torch_dtype: null
+use_peft: true
+
+# Data training arguments
+# For definitions, see: src/h4/training/config.py
+dataset_mixer:
+  logs/dpo_data/hf_wikibio_dpo: 1.0
+dataset_splits:
+- train
+preprocessing_num_workers: 12
+
+# DPOTrainer arguments
+bf16: true
+beta: 0.01
+do_eval: true
+evaluation_strategy: steps
+eval_steps: 125
+gradient_accumulation_steps: 4
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: False
+hub_model_id: microsoft/Phi-3-mini-4k-instruct
+learning_rate: 2.0e-6
+log_level: info
+logging_steps: 10
+lr_scheduler_type: cosine
+max_length: 2048
+max_prompt_length: 1024
+num_train_epochs: 10
+optim: adamw_torch
+output_dir: data/phi3-dpo
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 2
+push_to_hub: false
+save_strategy: "steps"
+save_steps: 100
+save_total_limit: 1
+seed: 42
+warmup_ratio: 0.1
+report_to: wandb
+lora_target_modules: { 'o_proj', 'qkv_proj', 'gate_up_proj', 'down_proj' }
