@@ -1,0 +1,16 @@
+[
+    {
+        "prompt": [
+            {
+                "role": "user",
+                "content": "In this task, I will give you a math question followed by 3 answers to the math question. Your task is to identify which of the 3 answers are correct and explain why the answer you choose is correct. Ensure that your answer ends with \\underline{correct option}. That is, end your response with \\underline{A}, \\underline{B}, or \\underline{C}.\n\nQuestion: Anne is drawing pictures. She has 12 markers and she notices that each one lasts for about 1.5 drawings. If she has already made 8 drawings, how many more can she make before she runs out of markers?\n3 researchers offer their reasoning and answer in response to this question. Researcher A offers answer A, researcher B offers answer B, and researcher C offers answer C. Which answer is correct?\n\nA. Let's think step by step\nAnne has 13 markers and each marker lasts for 1.5 drawings, so the total number of drawings she can make with all her markers is 13*1.5=19.5 drawings\nAnne has already made 8 drawings, so she can make 19.5-8=11.5 more drawings before she runs out of markers.\nSince she can't make half a drawing, she can make 11 more full drawings.\nThe answer is 11.\n\nB. Let's think step by step\nAnne's markers last for about 1.5 drawings each, so together, 12 markers can make 1.5*12=18 drawings.\nAnne has already made 8 drawings, so she can make 18-8=10 more drawings before running out of markers.\nThe answer is 10\n\nC. Let's think step by step\nAnne has 13.0 markers and each one lasts for about 1.5 drawings. Therefore, the total number of drawings Anne can make with all her markers is 13.0*1.5=19.5\nShe has already made 8 drawings, so she has 19.5-8=11.5 more drawings she can make before she runs out of markers. Therefore, she can make 12 more drawings as she can't make a half picture.\nThe answer is 12."
+            }
+        ],
+        "response": "Let's analyze each answer step by step:\n\nA. This answer incorrectly states that Anne has 13 markers, while the question states she has 12 markers. The calculation is also incorrect because it results in a fraction of a drawing, which is not possible.\n\nB. This answer correctly states that Anne has 12 markers and each marker lasts for about 1.5 drawings. The calculation is correct, and it results in a whole number of drawings. Anne can make 10 more drawings before running out of markers.\n\nC. This answer incorrectly states that Anne has 13.0 markers, while the question states she has 12 markers. The calculation is also incorrect because it results in a fraction of a drawing, which is not possible.\n\nThe correct answer is B. Anne can make 10 more drawings before running out of markers.\n\n\\underline{B}",
+        "correct": "B",
+        "model choice": "B",
+        "marked": false,
+        "model correct": true,
+        "base model correct": true
+    }
+]
